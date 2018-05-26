@@ -72,7 +72,6 @@ defmodule Triple do
     for a <- 1..n,
         b <- 1..n,
         c <- 1..n,
-        a + b + c <= n,
         a*a + b*b == c*c,
         do: {a, b, c}
   end
@@ -86,11 +85,11 @@ iex triple.exs
 ```
 
 ```iex
-iex> Triple.pythagorean(5)
+iex> Triple.pythagorean(4)
 []
-iex> Triple.pythagorean(12)
+iex> Triple.pythagorean(5)
 [{3, 4, 5}, {4, 3, 5}]
-iex> Triple.pythagorean(48)
+iex> Triple.pythagorean(20)
 [{3, 4, 5}, {4, 3, 5}, {5, 12, 13}, {6, 8, 10}, {8, 6, 10}, {8, 15, 17},
  {9, 12, 15}, {12, 5, 13}, {12, 9, 15}, {12, 16, 20}, {15, 8, 17}, {16, 12, 20}]
 ```
